@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | Carter&#39;s blog</title>
+  <title>Carter&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Huajian Zheng">
-<meta property="og:type" content="website">
+  <meta name="description" content="#面向对象学习day01 ##javaScript的结构  DOM Object Model，文档对象模型，为我们操作页面元素提供了一套方法（API） BOM：Object Model。浏览器对象模型，window//用window.open()可以打开一个新的页面 ECMAScript规定Js的核心语法，js语句，关键字，循环结构，分支结构##基本类型和复杂类型###基本类型： 字符串 num数">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Carter&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/09/30/面向对象学习-day01/index.html">
 <meta property="og:site_name" content="Carter&#39;s blog">
-<meta property="og:description" content="Huajian Zheng">
+<meta property="og:description" content="#面向对象学习day01 ##javaScript的结构  DOM Object Model，文档对象模型，为我们操作页面元素提供了一套方法（API） BOM：Object Model。浏览器对象模型，window//用window.open()可以打开一个新的页面 ECMAScript规定Js的核心语法，js语句，关键字，循环结构，分支结构##基本类型和复杂类型###基本类型： 字符串 num数">
+<meta property="og:updated_time" content="2017-09-30T01:47:15.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Carter&#39;s blog">
-<meta name="twitter:description" content="Huajian Zheng">
+<meta name="twitter:description" content="#面向对象学习day01 ##javaScript的结构  DOM Object Model，文档对象模型，为我们操作页面元素提供了一套方法（API） BOM：Object Model。浏览器对象模型，window//用window.open()可以打开一个新的页面 ECMAScript规定Js的核心语法，js语句，关键字，循环结构，分支结构##基本类型和复杂类型###基本类型： 字符串 num数">
   
     <link rel="alternative" href="/atom.xml" title="Carter&#39;s blog" type="application/atom+xml">
   
@@ -152,76 +153,405 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-面向对象学习-day01" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#面向对象学习day01</p>
+<p>##javaScript的结构</p>
+<ol>
+<li>DOM Object Model，文档对象模型，为我们操作页面元素提供了一套方法（API）</li>
+<li>BOM：Object Model。浏览器对象模型，window//用window.open()可以打开一个新的页面</li>
+<li>ECMAScript规定Js的核心语法，js语句，关键字，循环结构，分支结构<br>##基本类型和复杂类型<br>###基本类型：</li>
+<li>字符串</li>
+<li>num数值</li>
+<li>boolean布尔型</li>
+<li>undefined未定义</li>
+<li>null空<br>###复杂的数据类型</li>
+<li>Object</li>
+<li>Array数组</li>
+<li>Date日期</li>
+<li>Function函数</li>
+<li>String字符串函数</li>
+<li>Number</li>
+<li>Boolean</li>
+</ol>
+<p>###判断数据类型</p>
+<h4 id="关键字typeof"><a href="#关键字typeof" class="headerlink" title="关键字typeof"></a>关键字typeof</h4><pre><code>var str = &apos;测试的字符串&apos;;
+console.log(typeof str); // string
+</code></pre><p>语法 typeof 数据(变量)</p>
+<p>返回值 字符串类型</p>
+<p>通过typeof 操作复杂数据类型都是object,函数除外</p>
+<p>###等于和全等于<br>赋值 =</p>
+<p>等于 == :  判断左边和右边是否相等</p>
+<p>特点:只判断值是否相等</p>
+<p>全等于 ===: 判断左边和右边是否相等</p>
+<p>特点:不仅仅判断值是否相等,还判断类型是否一样</p>
+<pre><code> console.log(null == undefined); // true
+console.log(null === undefined);// false
+
+ // 一般情况下,变量的值永远不会为null, 除非手动设置为 null
+// 什么时候需要把变量的值设置为null?
+// 告诉系统不再使用这个变量,可以回收这个变量所占用的内存空间
+</code></pre><p>##关系运算符<br>关系运算符 : true | false</p>
+<pre><code>&lt; 小于
+
+&gt;大于
+
+&lt;= 小于等于
+
+&gt;= 大于等于
+</code></pre><p>用途:条件判断</p>
+<p>##逻辑预算符<br>逻辑非 : 取反<br>语法: ! 表达式<br>结果: 布尔类型, true | false</p>
+<p>逻辑或: ||<br>语法:  表达式1 || 表达式2<br>结果: 不是布尔类型的<br> 如果表达式1为真,返回表达式1<br> 如果表达式1为假,返回表达式2</p>
+<p>逻辑与: &amp;&amp;<br>语法:  表达式1 &amp;&amp; 表达式2<br>结果: 不是布尔类型的<br>如果表达式1为真,返回表达式2<br>如果表达式1为假,返回表达式1</p>
+<p>##值类型和引用类型<br>值类型：string number boolean undefinded null（*）</p>
+<p>引用类型：<br>Object Array Function Date</p>
+<p>区别：存储的信息不一样</p>
+<p>值类型存储具体的数据</p>
+<p>引用类型存储是引用（地址），该地址指向具体的内存空间，这一块内存空间，存储着具体的数值</p>
+<p>##值类型和引用类型的赋值<br>赋值:<br>内部实现:把右边存贮的信息复制一份给左边</p>
+<p>值类型的赋值:把右边存贮的信息(具体的数据)复制一份给左边</p>
+<p>特点:值类型赋值只是简单的数据复制,<b>相互独立的</b>,修改其中一个不会影响另外一个</p>
+<p>引用类型的赋值:把右边存贮的信息(指向具体数据的地址)复制一份给左边<br>特点:<b>共享同一份数据</b>,修改其中一个对象属性的值会影响另外一个</p>
+<p>##值类型和引用类型在函数中的使用<br>实参:实际的参数<br>形参:占位用的,函数调用之前没有值<br>函数调用: 把实参赋值给形参</p>
+<p>值类型作为函数的参数:实参和形参是相互独立的,没有影响(值传递)</p>
+<p>引用类型作为函数的参数:实参和形参共享同一份数据,修改其中一个对象属性的值会影响另一个<br>(地址传递)</p>
+<p>##对象的动态特性<br>可以对对象做一些操作 增加||删除||修改<br>访问数据对象：</p>
+<ol>
+<li><p>点语法</p>
+</li>
+<li><p>[]方括号语法</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">key是字符串</div><div class="line"></div><div class="line">obj[&apos;background Color&apos;] = &apos;red&apos;;</div><div class="line"></div><div class="line">obj[&apos;name&apos;] = &apos;zs&apos;;</div></pre></td></tr></table></figure>
+<p>使用new创建对象</p>
+<p>###in 关键字</p>
+<p>in关键字的作用:</p>
+<ol>
+<li><p>for..in 可以遍历对象的属性</p>
+</li>
+<li><p>判断对象中是否存在指定的属性</p>
+</li>
+<li><p>in在数组中的使用，使用in在操作数组的时候,操作是索引,并不是元素</p>
+</li>
+<li><p>判断数组中是否有某个元素</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> for (var i00;i&lt;arr.length;i++)&#123;</div><div class="line">    if(arr[i]==9)&#123;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>indexOf如果存在就返回该元素的索引，如果不存在就返回-1</li>
+</ol>
+<p>in关键字判断的对象是数组的索引</p>
+<p>indexOf判断的对象是数组元素的值.</p>
+<p>###循环和分支</p>
+<p>###delete<br>可以删除对象中的属性</p>
+<pre><code>var obj={name:&apos;zs&apos;,age:20};
+console.log(obj.name);可以删除未使用var声明变量
+     // 未使用var 声明的变量是全局变量,自动成为window的属性
+   a = 100;
+   console.log(a);
+   delete a;
+   //    console.log(a);//报错is not defined
+   //    console.log(window.a); // undefined
+</code></pre><p>不可以删除使用var声明的变量（<b>静默错误</b>）</p>
+<pre><code> var b = 200;
+console.log(delete b); // false-&gt;删除失败(静默错误)
+console.log(b); // 200可以删除直接定义在window上的属性
+window.demo = &apos;demo1&apos;;
+
+delete window.demo;
+console.log(window.demo); // undefined
+</code></pre><p>###循环和分支<br>循环：</p>
+<ol>
+<li>for</li>
+<li>for..in</li>
+<li>whlie</li>
+<li>do..while</li>
+</ol>
+<p>分支：</p>
+<ol>
+<li>if..else</li>
+<li>switch.case</li>
+</ol>
+<p>break防止穿透<br>continue，结束当前循环，执行下一循环</p>
+<p>###异常处理</p>
+<ol>
+<li>异常处理结构</li>
+<li>正常情况下，程序在执行的过程如果出现到了错误或异常，后面的代码不会执行，有时候我们需要保证即使程序错误出现了错误后面的代码也能执行，这个时候我们可以使用异常处理</li>
+<li>手动抛出一个错误，公司的规定（msg+code），抛出一个对象</li>
+<li>finally不管有没有出现错误，都会执行这个大括号，一般需要在这里释放一些资源。在后端开发中才会使用。</li>
+</ol>
+<p>附：异常处理的完整结构</p>
+<pre><code> try{
+        // 写上可能会出错的代码
+        var a;
+//        throw &apos;变量未定义&apos;;
+        throw {
+            msg : &apos;变量未定义&apos;,
+            code : 1001
+        }
+    }
+    catch (e){
+        //  try大括号中的代码出现了错误会执行这个大括号中的代码
+        // 获取到出错的原因
+        //  需要对错误进行相关的处理
+        console.log(e);
+    }
+    finally {
+        // 不管有没有出现错误,都会执行这个大括号
+        // 在前端开发中不会使用,在后端开发中才会使用(nodejs),一般需要在这里释放一些资源
+    }
+</code></pre><p>###DOM操作<br>DOM操作：增加|删除|设置|获取</p>
+<ol>
+<li>常见div标签</li>
+<li>设置样式</li>
+<li>添加</li>
+<li>获取新创建的div</li>
+<li>删除div</li>
+</ol>
+<p>##函数和对象的创建</p>
+<p>###函数</p>
+<ol>
+<li>声明函数</li>
+<li>函数表达式</li>
+<li><p>声明函数、匿名的函数表达式、命名的函数表达式<br>###对象创建</p>
+<pre><code>// 1.声明函数
+</code></pre><p> //    function 函数名(形参1,形参2…) {<br> //        // 函数体<br> //    }</p>
+<pre><code>// 2.匿名的函数表达式
+var func = function () { //匿名函数
+    // 函数体
+};
+//  命名的函数表达式
+var func1 = function demo() {
+    // 函数体
+}
+func1();//undefined
+demo();//报错
+</code></pre></li>
+</ol>
+<pre><code>    // 3.使用构造函数
+    var func2 = new Function(&quot;console.log(&apos;func2&apos;);&quot;);
+
+    func2();
+//    function func2() {
+//        console.log(&apos;func2&apos;);
+//    }
+
+
+    //对象创建
+
+    // 1.字面量创建对象
+    var obj = {name:&apos;zs&apos;,age:20};
+    // 2.使用构造函数
+    var obj1 = new Object(); // -&gt;{}
+</code></pre><p>##面向对象编程和面向过程<br>都是解决问题的一种思路（思想）<br>区别<br>面向过程关注的是解决问题需要的一个一个的步骤（细节）<br>面向对象关注的是解决问题所需要的对象</p>
+<p>##面向对象编程的相关概念</p>
+<ol>
+<li>对象：什么都是对象，万物皆对象一般指具体的食物</li>
+<li>对象静态信息的描述（名字，性别，身高）</li>
+<li>对象动态的行为（吃饭睡觉洗衣服打游戏谈恋爱打呼噜）</li>
+</ol>
+<p>现实生活中的对象和JS中的对象关系<br>对象静态信息————对象的属性（变量）<br>对象的动态行为————对象的方法（函数）</p>
+<p>##小案例</p>
+<p>###面向过程<br> var divs = document.getElementsByTagName(‘div’);</p>
+<pre><code>// 2. 设置div标签的样式
+for (var i = 0; i &lt; divs.length; i++) {
+    divs[i].style.border = &apos;2px solid #e8e8e8&apos;;
+}
+
+// 3.获取所有的P标签
+var ps = document.getElementsByTagName(&apos;p&apos;);
+
+// 4.设置p标签的样式
+for (var i = 0; i &lt; ps.length; i++) {
+    ps[i].style.border = &apos;2px solid #e8e8e8&apos;;
+}
+</code></pre><p>###函数封装<br>     function getElements(ele) {<br>        return  document.getElementsByTagName(ele);<br>    }</p>
+<pre><code>// 2.封装一个函数专门用来设置标签的样式
+function setEleStyle(eles) {
+
+    for (var i = 0; i &lt; eles.length; i++) {
+        eles[i].style.border = &apos;2px solid #e8e8e8&apos;;
+    }
+}
+
+var divs = getElements(&apos;div&apos;);
+setEleStyle(divs);
+
+var ps = getElements(&apos;p&apos;);
+setEleStyle(ps);
+</code></pre><p>存在的问题：全局变量污染问题，结构性不好，不方便阅读</p>
+<p>###创建并设置标签样式小案例(面向对象)</p>
+<p> var $ = {</p>
+<pre><code>    // 获取标签
+    getElements: {
+        getElementsByName : function (ele) {
+            return  document.getElementsByTagName(ele);
+        },
+        getElementsById : function (eleid) {
+            return  document.getElementById(eleid);
+        },
+        getElementsByClassName : function (className) {
+            return  document.getElementsByClassName(className);
+        },
+    },
+    // 设置样式
+    setEleStyle: {
+        // 设置边框
+         setBorder:function (eles) {
+            for (var i = 0; i &lt; eles.length; i++) {
+                eles[i].style.border = &apos;2px solid #e8e8e8&apos;;
+            }
+        },
+
+        //设置宽
+        setW : function () {
+
+        },
+
+        // 设置颜色
+        setColor : function () {
+
+        }
+    }
+};
+
+
+
+   var divs = $.getElements.getElementsByName(&apos;div&apos;);
+   $.setEleStyle.setBorder(divs);
+</code></pre><p>通过构建一个对象储存一个对象，在从里面的对象封装方法，里面的对象相当于同一个类型的操作。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/30/面向对象01/" class="archive-article-date">
-  	<time datetime="2017-09-30T01:50:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/30/面向对象01/">面向对象01</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/30/面向对象学习-day01/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/15/hello-world/" class="archive-article-date">
-  	<time datetime="2017-09-15T05:10:05.552Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/15/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -244,8 +574,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>hollo | Carter&#39;s blog</title>
+  <title>面向对象01 | Carter&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hellomyson">
+  <meta name="description" content="javaScript的结构 DOM Object Model，文档对象模型，为我们操作页面元素提供了一套方法（API）  BOM：Object Model。浏览器对象模型，window//用window.open()可以打开一个新的页面  ECMAScript规定Js的核心语法，js语句，关键字，循环结构，分支结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hollo">
-<meta property="og:url" content="http://yoursite.com/2017/09/15/hollo/index.html">
+<meta property="og:title" content="面向对象01">
+<meta property="og:url" content="http://yoursite.com/2017/09/30/面向对象01/index.html">
 <meta property="og:site_name" content="Carter&#39;s blog">
-<meta property="og:description" content="hellomyson">
-<meta property="og:updated_time" content="2017-09-15T05:39:13.481Z">
+<meta property="og:description" content="javaScript的结构 DOM Object Model，文档对象模型，为我们操作页面元素提供了一套方法（API）  BOM：Object Model。浏览器对象模型，window//用window.open()可以打开一个新的页面  ECMAScript规定Js的核心语法，js语句，关键字，循环结构，分支结构">
+<meta property="og:updated_time" content="2017-09-30T01:52:45.417Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hollo">
-<meta name="twitter:description" content="hellomyson">
+<meta name="twitter:title" content="面向对象01">
+<meta name="twitter:description" content="javaScript的结构 DOM Object Model，文档对象模型，为我们操作页面元素提供了一套方法（API）  BOM：Object Model。浏览器对象模型，window//用window.open()可以打开一个新的页面  ECMAScript规定Js的核心语法，js语句，关键字，循环结构，分支结构">
   
     <link rel="alternative" href="/atom.xml" title="Carter&#39;s blog" type="application/atom+xml">
   
@@ -46,7 +46,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="./img/me.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="">Carter</a></h1>
@@ -104,7 +104,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="./img/me.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Carter</h1>
@@ -153,27 +153,163 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hollo" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-面向对象01" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      hollo
+      面向对象01
     </h1>
   
 
         
-        <a href="/2017/09/15/hollo/" class="archive-article-date">
-  	<time datetime="2017-09-15T05:38:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
+        <a href="/2017/09/30/面向对象01/" class="archive-article-date">
+  	<time datetime="2017-09-30T01:50:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>hellomyson</p>
+        <h2 id="javaScript的结构"><a href="#javaScript的结构" class="headerlink" title="javaScript的结构"></a>javaScript的结构</h2><ol>
+<li><p>DOM Object Model，文档对象模型，为我们操作页面元素提供了一套方法（API）</p>
+</li>
+<li><p>BOM：Object Model。浏览器对象模型，window//用window.open()可以打开一个新的页面</p>
+</li>
+<li><p>ECMAScript规定Js的核心语法，js语句，关键字，循环结构，分支结构</p>
+<a id="more"></a>
+</li>
+</ol>
+<h2 id="基本类型和复杂类型"><a href="#基本类型和复杂类型" class="headerlink" title="基本类型和复杂类型"></a>基本类型和复杂类型</h2><h3 id="基本类型："><a href="#基本类型：" class="headerlink" title="基本类型："></a>基本类型：</h3><ol>
+<li>字符串</li>
+<li>num数值</li>
+<li>boolean布尔型</li>
+<li>undefined未定义</li>
+<li>null空</li>
+</ol>
+<h3 id="复杂的数据类型"><a href="#复杂的数据类型" class="headerlink" title="复杂的数据类型"></a>复杂的数据类型</h3><ol>
+<li>Object</li>
+<li>Array数组</li>
+<li>Date日期</li>
+<li>Function函数</li>
+<li>String字符串函数</li>
+<li>Number</li>
+<li>Boolean</li>
+</ol>
+<h3 id="判断数据类型"><a href="#判断数据类型" class="headerlink" title="判断数据类型"></a>判断数据类型</h3><h4 id="关键字typeof"><a href="#关键字typeof" class="headerlink" title="关键字typeof"></a>关键字typeof</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &apos;测试的字符串&apos;;</div><div class="line">console.log(typeof str); // string</div></pre></td></tr></table></figure>
+<p>语法 typeof 数据(变量)</p>
+<p>返回值 字符串类型</p>
+<p>通过typeof 操作复杂数据类型都是object,函数除外</p>
+<h3 id="等于和全等于"><a href="#等于和全等于" class="headerlink" title="等于和全等于"></a>等于和全等于</h3><p>赋值 =</p>
+<p>等于 == :  判断左边和右边是否相等</p>
+<p>特点:只判断值是否相等</p>
+<p>全等于 ===: 判断左边和右边是否相等</p>
+<p>特点:不仅仅判断值是否相等,还判断类型是否一样</p>
+<pre><code>console.log(null == undefined); // true
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(null === undefined);// false</div></pre></td></tr></table></figure>
+<pre><code>// 一般情况下,变量的值永远不会为null, 除非手动设置为 null
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 什么时候需要把变量的值设置为null?</div><div class="line">// 告诉系统不再使用这个变量,可以回收这个变量所占用的内存空间</div></pre></td></tr></table></figure>
+<h2 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h2><p>关系运算符 : true | false</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt; 小于</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt;大于</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;= 小于等于</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt;= 大于等于</div></pre></td></tr></table></figure>
+<p>用途:条件判断</p>
+<h2 id="逻辑预算符"><a href="#逻辑预算符" class="headerlink" title="逻辑预算符"></a>逻辑预算符</h2><p>逻辑非 : 取反<br>语法: ! 表达式<br>结果: 布尔类型, true | false</p>
+<p>逻辑或: ||<br>语法:  表达式1 || 表达式2<br>结果: 不是布尔类型的<br> 如果表达式1为真,返回表达式1<br> 如果表达式1为假,返回表达式2</p>
+<p>逻辑与: &amp;&amp;<br>语法:  表达式1 &amp;&amp; 表达式2<br>结果: 不是布尔类型的<br>如果表达式1为真,返回表达式2<br>如果表达式1为假,返回表达式1</p>
+<h2 id="值类型和引用类型"><a href="#值类型和引用类型" class="headerlink" title="值类型和引用类型"></a>值类型和引用类型</h2><p>值类型：string number boolean undefinded null（*）</p>
+<p>引用类型：<br>Object Array Function Date</p>
+<p>区别：存储的信息不一样</p>
+<p>值类型存储具体的数据</p>
+<p>引用类型存储是引用（地址），该地址指向具体的内存空间，这一块内存空间，存储着具体的数值</p>
+<h2 id="值类型和引用类型的赋值"><a href="#值类型和引用类型的赋值" class="headerlink" title="值类型和引用类型的赋值"></a>值类型和引用类型的赋值</h2><p>赋值:<br>内部实现:把右边存贮的信息复制一份给左边</p>
+<p>值类型的赋值:把右边存贮的信息(具体的数据)复制一份给左边</p>
+<p>特点:值类型赋值只是简单的数据复制,<b>相互独立的</b>,修改其中一个不会影响另外一个</p>
+<p>引用类型的赋值:把右边存贮的信息(指向具体数据的地址)复制一份给左边<br>特点:<b>共享同一份数据</b>,修改其中一个对象属性的值会影响另外一个</p>
+<h2 id="值类型和引用类型在函数中的使用"><a href="#值类型和引用类型在函数中的使用" class="headerlink" title="值类型和引用类型在函数中的使用"></a>值类型和引用类型在函数中的使用</h2><p>实参:实际的参数<br>形参:占位用的,函数调用之前没有值<br>函数调用: 把实参赋值给形参</p>
+<p>值类型作为函数的参数:实参和形参是相互独立的,没有影响(值传递)</p>
+<p>引用类型作为函数的参数:实参和形参共享同一份数据,修改其中一个对象属性的值会影响另一个<br>(地址传递)</p>
+<h2 id="对象的动态特性"><a href="#对象的动态特性" class="headerlink" title="对象的动态特性"></a>对象的动态特性</h2><p>可以对对象做一些操作 增加||删除||修改<br>访问数据对象：</p>
+<ol>
+<li>点语法</li>
+<li>[]方括号语法</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">key是字符串</div><div class="line"></div><div class="line">obj[&apos;background Color&apos;] = &apos;red&apos;;</div><div class="line"></div><div class="line">obj[&apos;name&apos;] = &apos;zs&apos;;</div></pre></td></tr></table></figure>
+<p>使用new创建对象</p>
+<h3 id="in-关键字"><a href="#in-关键字" class="headerlink" title="in 关键字"></a>in 关键字</h3><p>in关键字的作用:</p>
+<ol>
+<li>for..in 可以遍历对象的属性</li>
+<li>判断对象中是否存在指定的属性</li>
+<li>in在数组中的使用，使用in在操作数组的时候,操作是索引,并不是元素</li>
+<li>判断数组中是否有某个元素</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> for (var i00;i&lt;arr.length;i++)&#123;</div><div class="line">    if(arr[i]==9)&#123;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>indexOf如果存在就返回该元素的索引，如果不存在就返回-1</li>
+</ol>
+<p>in关键字判断的对象是数组的索引</p>
+<p>indexOf判断的对象是数组元素的值.</p>
+<h3 id="循环和分支"><a href="#循环和分支" class="headerlink" title="循环和分支"></a>循环和分支</h3><h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h3><p>可以删除对象中的属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var obj=&#123;name:&apos;zs&apos;,age:20&#125;;</div><div class="line">console.log(obj.name);可以删除未使用var声明变量</div><div class="line"> 	// 未使用var 声明的变量是全局变量,自动成为window的属性</div><div class="line">   a = 100;</div><div class="line">   console.log(a);</div><div class="line">   delete a;</div><div class="line">//    console.log(a);//报错is not defined</div><div class="line">//    console.log(window.a); // undefined</div></pre></td></tr></table></figure>
+<p>不可以删除使用var声明的变量（<b>静默错误</b>）</p>
+<pre><code>var b = 200;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">console.log(delete b); // false-&gt;删除失败(静默错误)</div><div class="line">console.log(b); // 200可以删除直接定义在window上的属性</div><div class="line">window.demo = &apos;demo1&apos;;</div><div class="line"></div><div class="line">delete window.demo;</div><div class="line">console.log(window.demo); // undefined</div></pre></td></tr></table></figure>
+<h3 id="循环和分支-1"><a href="#循环和分支-1" class="headerlink" title="循环和分支"></a>循环和分支</h3><p>循环：</p>
+<ol>
+<li>for</li>
+<li>for..in</li>
+<li>whlie</li>
+<li>do..while</li>
+</ol>
+<p>分支：</p>
+<ol>
+<li>if..else</li>
+<li>switch.case</li>
+</ol>
+<p>break防止穿透<br>continue，结束当前循环，执行下一循环</p>
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><ol>
+<li>异常处理结构</li>
+<li>正常情况下，程序在执行的过程如果出现到了错误或异常，后面的代码不会执行，有时候我们需要保证即使程序错误出现了错误后面的代码也能执行，这个时候我们可以使用异常处理</li>
+<li>手动抛出一个错误，公司的规定（msg+code），抛出一个对象</li>
+<li>finally不管有没有出现错误，都会执行这个大括号，一般需要在这里释放一些资源。在后端开发中才会使用。</li>
+</ol>
+<p>附：异常处理的完整结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"> try&#123;</div><div class="line">        // 写上可能会出错的代码</div><div class="line">        var a;</div><div class="line">//        throw &apos;变量未定义&apos;;</div><div class="line">        throw &#123;</div><div class="line">            msg : &apos;变量未定义&apos;,</div><div class="line">            code : 1001</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    catch (e)&#123;</div><div class="line">        //  try大括号中的代码出现了错误会执行这个大括号中的代码</div><div class="line">        // 获取到出错的原因</div><div class="line">        //  需要对错误进行相关的处理</div><div class="line">        console.log(e);</div><div class="line">    &#125;</div><div class="line">    finally &#123;</div><div class="line">        // 不管有没有出现错误,都会执行这个大括号</div><div class="line">        // 在前端开发中不会使用,在后端开发中才会使用(nodejs),一般需要在这里释放一些资源</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h3><p>DOM操作：增加|删除|设置|获取</p>
+<ol>
+<li>常见div标签</li>
+<li>设置样式</li>
+<li>添加</li>
+<li>获取新创建的div</li>
+<li>删除div</li>
+</ol>
+<h2 id="函数和对象的创建"><a href="#函数和对象的创建" class="headerlink" title="函数和对象的创建"></a>函数和对象的创建</h2><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ol>
+<li>声明函数</li>
+<li>函数表达式</li>
+<li>声明函数、匿名的函数表达式、命名的函数表达式</li>
+</ol>
+<h3 id="对象创建"><a href="#对象创建" class="headerlink" title="对象创建"></a>对象创建</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">   // 1.声明函数</div><div class="line">//    function 函数名(形参1,形参2...) &#123;</div><div class="line">//        // 函数体</div><div class="line">//    &#125;</div><div class="line"></div><div class="line">    // 2.匿名的函数表达式</div><div class="line">    var func = function () &#123; //匿名函数</div><div class="line">        // 函数体</div><div class="line">    &#125;;</div><div class="line">    //  命名的函数表达式</div><div class="line">    var func1 = function demo() &#123;</div><div class="line">        // 函数体</div><div class="line">    &#125;</div><div class="line">	func1();//undefined</div><div class="line">	demo();//报错</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">    // 3.使用构造函数</div><div class="line">    var func2 = new Function(&quot;console.log(&apos;func2&apos;);&quot;);</div><div class="line"></div><div class="line">    func2();</div><div class="line">//    function func2() &#123;</div><div class="line">//        console.log(&apos;func2&apos;);</div><div class="line">//    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">//对象创建</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 1.字面量创建对象</div><div class="line">var obj = &#123;name:&apos;zs&apos;,age:20&#125;;</div><div class="line">// 2.使用构造函数</div><div class="line">var obj1 = new Object(); // -&gt;&#123;&#125;</div></pre></td></tr></table></figure>
+<h2 id="面向对象编程和面向过程"><a href="#面向对象编程和面向过程" class="headerlink" title="面向对象编程和面向过程"></a>面向对象编程和面向过程</h2><p>都是解决问题的一种思路（思想）<br>区别<br>面向过程关注的是解决问题需要的一个一个的步骤（细节）<br>面向对象关注的是解决问题所需要的对象</p>
+<h2 id="面向对象编程的相关概念"><a href="#面向对象编程的相关概念" class="headerlink" title="面向对象编程的相关概念"></a>面向对象编程的相关概念</h2><ol>
+<li>对象：什么都是对象，万物皆对象一般指具体的食物</li>
+<li>对象静态信息的描述（名字，性别，身高）</li>
+<li>对象动态的行为（吃饭睡觉洗衣服打游戏谈恋爱打呼噜）</li>
+</ol>
+<p>现实生活中的对象和JS中的对象关系<br>对象静态信息————对象的属性（变量）<br>对象的动态行为————对象的方法（函数）</p>
+<h2 id="小案例"><a href="#小案例" class="headerlink" title="小案例"></a>小案例</h2><h3 id="面向过程"><a href="#面向过程" class="headerlink" title="面向过程"></a>面向过程</h3><p> var divs = document.getElementsByTagName(‘div’);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// 2. 设置div标签的样式</div><div class="line">for (var i = 0; i &lt; divs.length; i++) &#123;</div><div class="line">    divs[i].style.border = &apos;2px solid #e8e8e8&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 3.获取所有的P标签</div><div class="line">var ps = document.getElementsByTagName(&apos;p&apos;);</div><div class="line"></div><div class="line">// 4.设置p标签的样式</div><div class="line">for (var i = 0; i &lt; ps.length; i++) &#123;</div><div class="line">    ps[i].style.border = &apos;2px solid #e8e8e8&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="函数封装"><a href="#函数封装" class="headerlink" title="函数封装"></a>函数封装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"> function getElements(ele) &#123;</div><div class="line">    return  document.getElementsByTagName(ele);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 2.封装一个函数专门用来设置标签的样式</div><div class="line">function setEleStyle(eles) &#123;</div><div class="line"></div><div class="line">    for (var i = 0; i &lt; eles.length; i++) &#123;</div><div class="line">        eles[i].style.border = &apos;2px solid #e8e8e8&apos;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var divs = getElements(&apos;div&apos;);</div><div class="line">setEleStyle(divs);</div><div class="line"></div><div class="line">var ps = getElements(&apos;p&apos;);</div><div class="line">setEleStyle(ps);</div></pre></td></tr></table></figure>
+<p>存在的问题：全局变量污染问题，结构性不好，不方便阅读</p>
+<h3 id="创建并设置标签样式小案例-面向对象"><a href="#创建并设置标签样式小案例-面向对象" class="headerlink" title="创建并设置标签样式小案例(面向对象)"></a>创建并设置标签样式小案例(面向对象)</h3><p> var $ = {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">    // 获取标签</div><div class="line">    getElements: &#123;</div><div class="line">        getElementsByName : function (ele) &#123;</div><div class="line">            return  document.getElementsByTagName(ele);</div><div class="line">        &#125;,</div><div class="line">        getElementsById : function (eleid) &#123;</div><div class="line">            return  document.getElementById(eleid);</div><div class="line">        &#125;,</div><div class="line">        getElementsByClassName : function (className) &#123;</div><div class="line">            return  document.getElementsByClassName(className);</div><div class="line">        &#125;,</div><div class="line">    &#125;,</div><div class="line">    // 设置样式</div><div class="line">    setEleStyle: &#123;</div><div class="line">        // 设置边框</div><div class="line">         setBorder:function (eles) &#123;</div><div class="line">            for (var i = 0; i &lt; eles.length; i++) &#123;</div><div class="line">                eles[i].style.border = &apos;2px solid #e8e8e8&apos;;</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        //设置宽</div><div class="line">        setW : function () &#123;</div><div class="line">			</div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        // 设置颜色</div><div class="line">        setColor : function () &#123;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var divs = $.getElements.getElementsByName(&apos;div&apos;);</div><div class="line">$.setEleStyle.setBorder(divs);</div></pre></td></tr></table></figure>
+<p>通过构建一个对象储存一个对象，在从里面的对象封装方法，里面的对象相当于同一个类型的操作。</p>
 
       
 
@@ -253,7 +389,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/15/hollo/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/30/面向对象01/" alt="微信分享二维码">
     </div>
 </div>
 
