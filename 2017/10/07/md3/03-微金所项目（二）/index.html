@@ -302,17 +302,17 @@
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">&lt;!-- </div><div class="line">  以下容器就是整个轮播图组件的整体，</div><div class="line">  注意该盒子必须加上 class=&quot;carousel slide&quot; data-ride=&quot;carousel&quot; 表示当前是一个轮播图</div><div class="line">  bootstrap.js会自动为当前元素添加图片轮播的特效</div><div class="line">--&gt;</div><div class="line">&lt;div id=&quot;轮播图的ID&quot; class=&quot;carousel slide&quot; data-ride=&quot;carousel&quot;&gt;</div><div class="line">  &lt;!-- ol标签是图片轮播的控制点 --&gt;</div><div class="line">  &lt;ol class=&quot;carousel-indicators&quot;&gt;</div><div class="line">    &lt;!-- </div><div class="line">      每一个li就是一个单独的控制点</div><div class="line">        data-target属性就是指定当前控制点控制的是哪一个轮播图，其目的是如果界面上有多个轮播图，便于区分到底控制哪一个</div><div class="line">        data-slide-to属性是指当前的li元素绑定的是第几个轮播项</div><div class="line">      注意，默认必须给其中某个li加上active，展示的时候就是焦点项目</div><div class="line">    --&gt;</div><div class="line">    &lt;li data-target=&quot;#轮播图的ID&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;</div><div class="line">    &lt;li data-target=&quot;#轮播图的ID&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;</div><div class="line">    &lt;!-- ...更多的 --&gt;</div><div class="line">  &lt;/ol&gt;</div><div class="line">  &lt;!-- </div><div class="line">    .carousel-inner是所有轮播项的容器盒子，</div><div class="line">    注意role=&quot;listbox&quot;代表当前div是一个列表盒子，作用就是给当前div添加一个语义</div><div class="line">  --&gt;</div><div class="line">  &lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;</div><div class="line">    &lt;!-- 每一个.item就是单个轮播项目，注意默认要给第一个轮播项目加上active，表示为焦点 --&gt;</div><div class="line">    &lt;div class=&quot;item active&quot;&gt;</div><div class="line">      &lt;!-- 轮播项目中展示的图片 --&gt;</div><div class="line">      &lt;img src=&quot;example.jpg&quot; alt=&quot;示例图片&quot;&gt;</div><div class="line">      &lt;div class=&quot;carousel-caption&quot;&gt;</div><div class="line">        &lt;!-- 标题或说明性文字，如果不需要，直接删除当前div.carousel-caption --&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;div class=&quot;item&quot;&gt;</div><div class="line">      &lt;!-- ... --&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;!-- ... --&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;!-- 图片轮播上左右两个控制按钮，分别点击可以滚动到上一张和下一张 --&gt;</div><div class="line">  &lt;!-- 此处需要注意的是 该a链接的href属性必须指向需要控制的轮播图ID --&gt;</div><div class="line">  &lt;!-- 另外a链接中的data-slide=&quot;prev&quot;代表点击该链接会滚到上一张，如果设置为next的话则相反 --&gt;</div><div class="line">  &lt;a class=&quot;left carousel-control&quot; href=&quot;#轮播图的ID&quot; role=&quot;button&quot; data-slide=&quot;prev&quot;&gt;</div><div class="line">    &lt;span class=&quot;glyphicon glyphicon-chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;</div><div class="line">    &lt;span class=&quot;sr-only&quot;&gt;上一张&lt;/span&gt;</div><div class="line">  &lt;/a&gt;</div><div class="line">  &lt;a class=&quot;right carousel-control&quot; href=&quot;#轮播图的ID&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt;</div><div class="line">    &lt;span class=&quot;glyphicon glyphicon-chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;</div><div class="line">    &lt;span class=&quot;sr-only&quot;&gt;下一张&lt;/span&gt;</div><div class="line">  &lt;/a&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<h3 id="1-引入焦点图组件"><a href="#1-引入焦点图组件" class="headerlink" title="1.引入焦点图组件"></a>1.引入焦点图组件</h3><h4 id="1-第一件事修改id"><a href="#1-第一件事修改id" class="headerlink" title="1.第一件事修改id"></a>1.第一件事修改id</h4><p><img src="1.png" alt=""></p>
-<h4 id="2-添加大图片"><a href="#2-添加大图片" class="headerlink" title="2.添加大图片"></a>2.添加大图片</h4><p><img src="2.png" alt=""></p>
-<h4 id="3-添加焦点图的高度"><a href="#3-添加焦点图的高度" class="headerlink" title="3.添加焦点图的高度"></a>3.添加焦点图的高度</h4><p><img src="3.png" alt=""></p>
+<h3 id="1-引入焦点图组件"><a href="#1-引入焦点图组件" class="headerlink" title="1.引入焦点图组件"></a>1.引入焦点图组件</h3><h4 id="1-第一件事修改id"><a href="#1-第一件事修改id" class="headerlink" title="1.第一件事修改id"></a>1.第一件事修改id</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/1.png" alt=""></p>
+<h4 id="2-添加大图片"><a href="#2-添加大图片" class="headerlink" title="2.添加大图片"></a>2.添加大图片</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/2.png" alt=""></p>
+<h4 id="3-添加焦点图的高度"><a href="#3-添加焦点图的高度" class="headerlink" title="3.添加焦点图的高度"></a>3.添加焦点图的高度</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/3.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="4.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/4.png" alt=""></p>
 <p><strong>解决图片居中：</strong></p>
 <p>1.换用背景图的方式，background-position: center center;</p>
 <p>2.使img元素绝对定位，left:50%，margin-left: -width\/2</p>
-<h3 id="2-图片修改成背景图片"><a href="#2-图片修改成背景图片" class="headerlink" title="2.图片修改成背景图片"></a>2.图片修改成背景图片</h3><p><img src="5.png" alt=""></p>
+<h3 id="2-图片修改成背景图片"><a href="#2-图片修改成背景图片" class="headerlink" title="2.图片修改成背景图片"></a>2.图片修改成背景图片</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/5.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="6.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/6.png" alt=""></p>
 <h3 id="3-背景图片居中"><a href="#3-背景图片居中" class="headerlink" title="3.背景图片居中"></a>3.背景图片居中</h3><p>background 简写属性在一个声明中设置所有的背景属性。</p>
 <p>可以设置如下属性：</p>
 <ul>
@@ -333,9 +333,9 @@
 <li><p>background-size</p>
 </li>
 </ul>
-<p><img src="7.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/7.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="8.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/8.png" alt=""></p>
 <h3 id="4-图片响应式"><a href="#4-图片响应式" class="headerlink" title="4.图片响应式"></a>4.图片响应式</h3><p><strong>大屏加载大图，小屏加载小图</strong></p>
 <p><strong>目的</strong></p>
 <ul>
@@ -350,19 +350,19 @@
 <li>根据判断情况决定使用具体的大图还是小图；</li>
 </ul>
 <h4 id="1-介绍数据绑定到标签"><a href="#1-介绍数据绑定到标签" class="headerlink" title="1.介绍数据绑定到标签"></a>1.介绍数据绑定到标签</h4><p> data()的用法 :  <a href="http://www.w3school.com.cn/jquery/data_jquery_data.asp" target="_blank" rel="external">http://www.w3school.com.cn/jquery/data_jquery_data.asp</a></p>
-<h5 id="1-新建项目"><a href="#1-新建项目" class="headerlink" title="1.新建项目"></a>1.新建项目</h5><p><img src="9.png" alt=""></p>
+<h5 id="1-新建项目"><a href="#1-新建项目" class="headerlink" title="1.新建项目"></a>1.新建项目</h5><p><img src="/2017/10/07/md3/03-微金所项目（二）/9.png" alt=""></p>
 <h5 id="2-引入案例"><a href="#2-引入案例" class="headerlink" title="2.引入案例"></a>2.引入案例</h5><p>$(function (){   } )  是$(document).ready(function({ }) 的简写  ，是在页面DOM文档加载完成后加载执行</p>
-<p><img src="10.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/10.png" alt=""></p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;!--兼容ie, 告诉ie使用最新的解析器解释该网页--&gt;</div><div class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</div><div class="line">    &lt;!--兼容移动设备：网页的视口==设备的视口 --&gt;</div><div class="line">    &lt;meta name=&quot;viewport&quot;</div><div class="line">          content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">    &lt;!--引入bootstrap框架--&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;lib/bootstrap/css/bootstrap.css&quot;&gt;</div><div class="line"></div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;button id=&quot;btn1&quot;&gt;把数据添加到 div 元素&lt;/button&gt;&lt;br /&gt;</div><div class="line">&lt;button id=&quot;btn2&quot;&gt;获取已添加到 div 元素的数据&lt;/button&gt;</div><div class="line">&lt;div&gt;&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;!--引入jquery框架--&gt;</div><div class="line">&lt;script src=&quot;lib/jquery/jquery.js&quot; s&gt; &lt;/script&gt;</div><div class="line">&lt;!--引入bootstrap框架--&gt;</div><div class="line">&lt;script src=&quot;lib/bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    $(document).ready(function()&#123;</div><div class="line">        $(&quot;#btn1&quot;).click(function()&#123;</div><div class="line">            $(&quot;div&quot;).data(&quot;greeting&quot;, &quot;Hello World&quot;);</div><div class="line">        &#125;);</div><div class="line">        $(&quot;#btn2&quot;).click(function()&#123;</div><div class="line">            alert($(&quot;div&quot;).data(&quot;greeting&quot;));</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <h5 id="3-给标签添加自定义数据，并获取"><a href="#3-给标签添加自定义数据，并获取" class="headerlink" title="3.给标签添加自定义数据，并获取"></a>3.给标签添加自定义数据，并获取</h5><p>标签绑定数据</p>
-<p><img src="11.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/11.png" alt=""></p>
 <p>js代码获取绑定的数据</p>
-<p><img src="12.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/12.png" alt=""></p>
 <p>执行的效果：</p>
-<p><img src="13.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/13.png" alt=""></p>
 <h4 id="2-项目轮播图标签绑定图片数据"><a href="#2-项目轮播图标签绑定图片数据" class="headerlink" title="2.项目轮播图标签绑定图片数据"></a>2.项目轮播图标签绑定图片数据</h4><p>语法：data-xxx-xxx</p>
-<p><img src="14.png" alt="img"><img src="14.png" alt=""></p>
-<h4 id="3-监听屏幕设备宽度发生改变"><a href="#3-监听屏幕设备宽度发生改变" class="headerlink" title="3.监听屏幕设备宽度发生改变"></a>3.监听屏幕设备宽度发生改变</h4><p><img src="15.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/14.png" alt="img"><img src="/2017/10/07/md3/03-微金所项目（二）/14.png" alt=""></p>
+<h4 id="3-监听屏幕设备宽度发生改变"><a href="#3-监听屏幕设备宽度发生改变" class="headerlink" title="3.监听屏幕设备宽度发生改变"></a>3.监听屏幕设备宽度发生改变</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/15.png" alt=""></p>
 <h4 id="4-获取item标签中data-x-x信息"><a href="#4-获取item标签中data-x-x信息" class="headerlink" title="4.获取item标签中data-x-x信息"></a>4.获取item标签中data-x-x信息</h4><p>jquery  each 函数的用法：<a href="http://www.w3school.com.cn/jquery/traversing_each.asp" target="_blank" rel="external">http://www.w3school.com.cn/jquery/traversing_each.asp</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(selector).each(function(index,element))</div></pre></td></tr></table></figure>
 <table>
@@ -379,235 +379,235 @@
 </tr>
 </tbody>
 </table>
-<p><img src="16.png" alt=""></p>
-<h4 id="5-item标签添加背景图片"><a href="#5-item标签添加背景图片" class="headerlink" title="5.item标签添加背景图片"></a>5.item标签添加背景图片</h4><p><img src="17.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/16.png" alt=""></p>
+<h4 id="5-item标签添加背景图片"><a href="#5-item标签添加背景图片" class="headerlink" title="5.item标签添加背景图片"></a>5.item标签添加背景图片</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/17.png" alt=""></p>
 <h4 id="6-第一次加载时显示图片"><a href="#6-第一次加载时显示图片" class="headerlink" title="6.第一次加载时显示图片"></a>6.第一次加载时显示图片</h4><p>第一种：</p>
-<p><img src="18.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/18.png" alt=""></p>
 <p>第二种：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//手动触发一个事件, 事件发生时运行的函数resize函数；</div><div class="line">//达到一进来就调用changeImageUrl函数</div><div class="line">$(window).trigger(&apos;resize&apos;);</div></pre></td></tr></table></figure>
-<p><img src="19.png" alt=""></p>
-<h4 id="7-小屏给item添加img"><a href="#7-小屏给item添加img" class="headerlink" title="7.小屏给item添加img"></a>7.小屏给item添加img</h4><p><img src="20.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/19.png" alt=""></p>
+<h4 id="7-小屏给item添加img"><a href="#7-小屏给item添加img" class="headerlink" title="7.小屏给item添加img"></a>7.小屏给item添加img</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/20.png" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">*    Created by liujun on 2017/8/13.</div><div class="line">      */</div><div class="line">     $(function () &#123;</div><div class="line">      /**目的：根据屏幕的尺寸，更改图片的显示方式**/</div><div class="line"></div><div class="line">      // changeImageUrl();</div><div class="line"></div><div class="line">      //1.监听屏幕设备宽度是否发生改变</div><div class="line">      $(window).on(&apos;resize&apos;,changeImageUrl);</div><div class="line">      /*默认一进来就调用changeImageUrl函数*/</div><div class="line">      $(window).trigger(&apos;resize&apos;);</div><div class="line"></div><div class="line">      /**</div><div class="line">     * 当窗口发生改变的时候，修改图片的路劲</div><div class="line">       */</div><div class="line">    function changeImageUrl() &#123;</div><div class="line">        //2.获取屏幕的宽度</div><div class="line">        var windowwidth=$(window).width();</div><div class="line">        // console.log(windowwidth);</div><div class="line">        //3.显示小图</div><div class="line">        // if(windowwidth&lt;720)&#123;</div><div class="line">        //</div><div class="line">        //     //4.显示大图</div><div class="line">        // &#125;else&#123;</div><div class="line">        //</div><div class="line">        // &#125;</div><div class="line">        //是否要显示小图</div><div class="line">        var isShowSmallImage=windowwidth&lt;720;</div><div class="line">    </div><div class="line">        //5.获取所有item的标签</div><div class="line">        var $items=$(&apos;#wjs-banner .item&apos;);</div><div class="line">        //6.遍历items</div><div class="line">        $items.each(function (index, value) &#123;</div><div class="line">            //7.获取data-xx-xx中的数据</div><div class="line">            var $item=$(value);</div><div class="line">            //8.获取到图片的路劲</div><div class="line">            var imageUrl=isShowSmallImage?$item.data(&apos;sm-img&apos;):$item.data(&apos;lg-img&apos;);</div><div class="line">            console.log(imageUrl);</div><div class="line">            var src=&apos;url(&apos;+imageUrl+&apos;)&apos;;</div><div class="line">            $item.css(&#123;</div><div class="line">                backgroundImage:src,</div><div class="line">            &#125;)</div><div class="line">    </div><div class="line">            //如果是小屏幕</div><div class="line">            if(isShowSmallImage)&#123;</div><div class="line">                //item添加一个img</div><div class="line">                var img=&apos;&lt;img src=&quot;&apos;+imageUrl+&apos;&quot; &gt;&apos;;</div><div class="line">                //先清空：empty()移除指定元素中的所有子节点</div><div class="line">                $item.empty();</div><div class="line">                //添加</div><div class="line">                $item.append(img);</div><div class="line">            &#125;else&#123;</div><div class="line">                //大屏清空:empty()移除指定元素中的所有子节点</div><div class="line">                $item.empty();</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h4 id="8-自适应轮播图item的高度"><a href="#8-自适应轮播图item的高度" class="headerlink" title="8.自适应轮播图item的高度"></a>8.自适应轮播图item的高度</h4><p><img src="21.png" alt=""></p>
+<h4 id="8-自适应轮播图item的高度"><a href="#8-自适应轮播图item的高度" class="headerlink" title="8.自适应轮播图item的高度"></a>8.自适应轮播图item的高度</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/21.png" alt=""></p>
 <h2 id="2-平台展示"><a href="#2-平台展示" class="headerlink" title="2.平台展示"></a>2.平台展示</h2><h3 id="1-栅格系统布局"><a href="#1-栅格系统布局" class="headerlink" title="1.栅格系统布局"></a>1.栅格系统布局</h3><p>默认的格式</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">    &lt;div class=&quot;row&quot;&gt;</div><div class="line">       .....      </div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<p><img src="22.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/22.png" alt=""></p>
 <h3 id="2-媒体对象"><a href="#2-媒体对象" class="headerlink" title="2.媒体对象"></a>2.媒体对象</h3><p>媒体对象 : <a href="http://v3.bootcss.com/components/#media" target="_blank" rel="external">http://v3.bootcss.com/components/#media</a></p>
-<p><img src="23.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/23.png" alt=""></p>
 <h3 id="3-添加字体图标"><a href="#3-添加字体图标" class="headerlink" title="3.添加字体图标"></a>3.添加字体图标</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">e907    35</div></pre></td></tr></table></figure>
-<p><img src="24.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/24.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="25.png" alt=""></p>
-<h3 id="4-设计内边距和border"><a href="#4-设计内边距和border" class="headerlink" title="4.设计内边距和border"></a>4.设计内边距和border</h3><p><img src="26.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/25.png" alt=""></p>
+<h3 id="4-设计内边距和border"><a href="#4-设计内边距和border" class="headerlink" title="4.设计内边距和border"></a>4.设计内边距和border</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/26.png" alt=""></p>
 <h3 id="5-修改布局"><a href="#5-修改布局" class="headerlink" title="5.修改布局"></a>5.修改布局</h3><p>辅助类： <a href="http://v3.bootcss.com/css/#helper-classes" target="_blank" rel="external">http://v3.bootcss.com/css/#helper-classes</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;!--媒体对象--&gt;</div><div class="line">           &lt;div class=&quot;media&quot;&gt;</div><div class="line">               &lt;a href=&quot;#&quot; class=&quot;text-muted&quot;&gt;</div><div class="line">                   &lt;div class=&quot;media-left&quot;&gt;</div><div class="line">                      &lt;i class=&quot;icon-uniE907&quot;&gt;&lt;/i&gt;</div><div class="line">                   &lt;/div&gt; </div><div class="line">                   &lt;div class=&quot;media-body&quot;&gt;</div><div class="line">                       &lt;h4 class=&quot;media-heading&quot; &gt;交易支付保证安全&lt;/h4&gt;</div><div class="line">                       &lt;p &gt;银联支付全程保障安全&lt;/p&gt;</div><div class="line">                   &lt;/div&gt;</div><div class="line">               &lt;/a&gt;</div><div class="line">    </div><div class="line">           &lt;/div&gt;</div></pre></td></tr></table></figure>
-<p><img src="27.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/27.png" alt=""></p>
 <p>鼠标悬浮在a标签的样式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">color: #E9232C</div></pre></td></tr></table></figure>
-<p><img src="28.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/28.png" alt=""></p>
 <h3 id="6-自适应布局"><a href="#6-自适应布局" class="headerlink" title="6.自适应布局"></a>6.自适应布局</h3><p><strong>中屏显示2列， 大屏显示3列</strong></p>
 <p>1.添加六个媒体对象布局</p>
-<p><img src="29.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/29.png" alt=""></p>
 <p>2.中屏显示2列， 大屏显示3列</p>
 <p>中屏：col-md-6</p>
 <p>大屏：col-lg-4</p>
-<p><img src="30.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/30.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="31.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/31.png" alt=""></p>
 <p>第一个item添加一个marginTop  ,  或者 用一个div来包裹 媒体对象  </p>
-<p><img src="32.png" alt=""></p>
-<h3 id="7-小屏幕隐藏"><a href="#7-小屏幕隐藏" class="headerlink" title="7.小屏幕隐藏"></a>7.小屏幕隐藏</h3><p><img src="33.png" alt=""></p>
-<h2 id="3-预约"><a href="#3-预约" class="headerlink" title="3.预约"></a>3.预约</h2><h3 id="1-栅格布局"><a href="#1-栅格布局" class="headerlink" title="1.栅格布局"></a>1.栅格布局</h3><p><img src="34.png" alt=""></p>
-<h3 id="2-中屏分两列"><a href="#2-中屏分两列" class="headerlink" title="2.中屏分两列"></a>2.中屏分两列</h3><p><img src="35.png" alt=""></p>
-<h3 id="3-小屏隐藏右边"><a href="#3-小屏隐藏右边" class="headerlink" title="3.小屏隐藏右边"></a>3.小屏隐藏右边</h3><p><img src="36.png" alt=""></p>
-<h3 id="4-完善布局"><a href="#4-完善布局" class="headerlink" title="4.完善布局"></a>4.完善布局</h3><p><img src="37.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/32.png" alt=""></p>
+<h3 id="7-小屏幕隐藏"><a href="#7-小屏幕隐藏" class="headerlink" title="7.小屏幕隐藏"></a>7.小屏幕隐藏</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/33.png" alt=""></p>
+<h2 id="3-预约"><a href="#3-预约" class="headerlink" title="3.预约"></a>3.预约</h2><h3 id="1-栅格布局"><a href="#1-栅格布局" class="headerlink" title="1.栅格布局"></a>1.栅格布局</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/34.png" alt=""></p>
+<h3 id="2-中屏分两列"><a href="#2-中屏分两列" class="headerlink" title="2.中屏分两列"></a>2.中屏分两列</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/35.png" alt=""></p>
+<h3 id="3-小屏隐藏右边"><a href="#3-小屏隐藏右边" class="headerlink" title="3.小屏隐藏右边"></a>3.小屏隐藏右边</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/36.png" alt=""></p>
+<h3 id="4-完善布局"><a href="#4-完善布局" class="headerlink" title="4.完善布局"></a>4.完善布局</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/37.png" alt=""></p>
 <h3 id="5-添加padding和字体样式"><a href="#5-添加padding和字体样式" class="headerlink" title="5.添加padding和字体样式"></a>5.添加padding和字体样式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#wjs_order&#123;</div><div class="line">    padding: 20px 0;</div><div class="line">    font-size: 16px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="38.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/38.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="39.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/39.png" alt=""></p>
 <h3 id="6-添加字体图标"><a href="#6-添加字体图标" class="headerlink" title="6.添加字体图标"></a>6.添加字体图标</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">e906    e905</div></pre></td></tr></table></figure>
-<p><img src="40.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/40.png" alt=""></p>
 <h3 id="7-修改字体样式"><a href="#7-修改字体样式" class="headerlink" title="7.修改字体样式"></a>7.修改字体样式</h3><p>1.所有字体变成灰色</p>
-<p><img src="41.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/41.png" alt=""></p>
 <p>2.个别字体红色</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#E9232C</div></pre></td></tr></table></figure>
-<p><img src="44.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/44.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="43.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/43.png" alt=""></p>
 <h2 id="4-产品中心"><a href="#4-产品中心" class="headerlink" title="4.产品中心"></a>4.产品中心</h2><h3 id="1-选项卡实现"><a href="#1-选项卡实现" class="headerlink" title="1.选项卡实现"></a>1.选项卡实现</h3><h4 id="1-标签页介绍"><a href="#1-标签页介绍" class="headerlink" title="1.标签页介绍"></a>1.标签页介绍</h4><p>标签页：  <a href="http://v3.bootcss.com/javascript/#tabs" target="_blank" rel="external">http://v3.bootcss.com/javascript/#tabs</a></p>
-<h5 id="1-新建项目-1"><a href="#1-新建项目-1" class="headerlink" title="1.新建项目"></a>1.新建项目</h5><p><img src="45.png" alt=""></p>
+<h5 id="1-新建项目-1"><a href="#1-新建项目-1" class="headerlink" title="1.新建项目"></a>1.新建项目</h5><p><img src="/2017/10/07/md3/03-微金所项目（二）/45.png" alt=""></p>
 <h5 id="2-引入标签页"><a href="#2-引入标签页" class="headerlink" title="2.引入标签页"></a>2.引入标签页</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!--</div><div class="line">       #home ： 通过锚点来关联面板</div><div class="line">       data-toggle=&quot;tab&quot; ： 面板切换的方式。 （modal , tab , dropdown ,collapse..）</div><div class="line">--&gt;</div></pre></td></tr></table></figure>
-<p><img src="46.png" alt=""></p>
-<h5 id="3-给面板添加动画"><a href="#3-给面板添加动画" class="headerlink" title="3.给面板添加动画"></a>3.给面板添加动画</h5><p><img src="47.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/46.png" alt=""></p>
+<h5 id="3-给面板添加动画"><a href="#3-给面板添加动画" class="headerlink" title="3.给面板添加动画"></a>3.给面板添加动画</h5><p><img src="/2017/10/07/md3/03-微金所项目（二）/47.png" alt=""></p>
 <p>执行的效果：</p>
-<p><img src="48.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/48.png" alt=""></p>
 <h4 id="2-项目引入标签页"><a href="#2-项目引入标签页" class="headerlink" title="2.项目引入标签页"></a>2.项目引入标签页</h4><p><strong>标签页放在栅格布局中</strong></p>
-<p><img src="53.png" alt=""></p>
-<h4 id="3-修改id和标签名"><a href="#3-修改id和标签名" class="headerlink" title="3.修改id和标签名"></a>3.修改id和标签名</h4><p><img src="50.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/53.png" alt=""></p>
+<h4 id="3-修改id和标签名"><a href="#3-修改id和标签名" class="headerlink" title="3.修改id和标签名"></a>3.修改id和标签名</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/50.png" alt=""></p>
 <p>执行的效果：</p>
-<p><img src="51.png" alt=""></p>
-<h4 id="4-右边的更多按钮"><a href="#4-右边的更多按钮" class="headerlink" title="4.右边的更多按钮"></a>4.右边的更多按钮</h4><p><img src="52.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/51.png" alt=""></p>
+<h4 id="4-右边的更多按钮"><a href="#4-右边的更多按钮" class="headerlink" title="4.右边的更多按钮"></a>4.右边的更多按钮</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/52.png" alt=""></p>
 <h4 id="5-设计产品中心背景和padding"><a href="#5-设计产品中心背景和padding" class="headerlink" title="5.设计产品中心背景和padding"></a>5.设计产品中心背景和padding</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/*产品中心*/</div><div class="line">#wjs_product &#123;</div><div class="line">    padding: 20px 0;</div><div class="line">    background-color: #cccccc;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>执行效果：</p>
-<p><img src="54.png" alt=""></p>
-<h4 id="6-设计选项卡a标签的样式"><a href="#6-设计选项卡a标签的样式" class="headerlink" title="6.设计选项卡a标签的样式"></a>6.设计选项卡a标签的样式</h4><p><img src="55.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/54.png" alt=""></p>
+<h4 id="6-设计选项卡a标签的样式"><a href="#6-设计选项卡a标签的样式" class="headerlink" title="6.设计选项卡a标签的样式"></a>6.设计选项卡a标签的样式</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/55.png" alt=""></p>
 <p>执行的效果：</p>
-<p><img src="56.png" alt=""></p>
-<h4 id="7-设计选中的下划线"><a href="#7-设计选中的下划线" class="headerlink" title="7.设计选中的下划线"></a>7.设计选中的下划线</h4><p><img src="57.png" alt=""></p>
-<h4 id="8-处理更多的样式"><a href="#8-处理更多的样式" class="headerlink" title="8.处理更多的样式"></a>8.处理更多的样式</h4><p><img src="58.png" alt=""></p>
-<h4 id="9-大屏显示更多"><a href="#9-大屏显示更多" class="headerlink" title="9.大屏显示更多"></a>9.大屏显示更多</h4><p><img src="59.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/56.png" alt=""></p>
+<h4 id="7-设计选中的下划线"><a href="#7-设计选中的下划线" class="headerlink" title="7.设计选中的下划线"></a>7.设计选中的下划线</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/57.png" alt=""></p>
+<h4 id="8-处理更多的样式"><a href="#8-处理更多的样式" class="headerlink" title="8.处理更多的样式"></a>8.处理更多的样式</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/58.png" alt=""></p>
+<h4 id="9-大屏显示更多"><a href="#9-大屏显示更多" class="headerlink" title="9.大屏显示更多"></a>9.大屏显示更多</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/59.png" alt=""></p>
 <h4 id="10-小屏滚动条"><a href="#10-小屏滚动条" class="headerlink" title="10.小屏滚动条"></a>10.小屏滚动条</h4><h5 id="1-滚动条原理"><a href="#1-滚动条原理" class="headerlink" title="1.滚动条原理"></a>1.滚动条原理</h5><p>1.父标签设计了overflow:auto</p>
 <p>2.子标签的宽度超出了父标签宽度</p>
-<p><img src="60.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/60.png" alt=""></p>
 <p>执行的效果：</p>
-<p><img src="61.png" alt=""></p>
-<h5 id="2-选项卡父标签添加overflow"><a href="#2-选项卡父标签添加overflow" class="headerlink" title="2.选项卡父标签添加overflow"></a>2.选项卡父标签添加overflow</h5><p><img src="62.png" alt=""></p>
-<h5 id="3-小屏时设计选项卡ul宽度"><a href="#3-小屏时设计选项卡ul宽度" class="headerlink" title="3.小屏时设计选项卡ul宽度"></a>3.小屏时设计选项卡ul宽度</h5><p><img src="63.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/61.png" alt=""></p>
+<h5 id="2-选项卡父标签添加overflow"><a href="#2-选项卡父标签添加overflow" class="headerlink" title="2.选项卡父标签添加overflow"></a>2.选项卡父标签添加overflow</h5><p><img src="/2017/10/07/md3/03-微金所项目（二）/62.png" alt=""></p>
+<h5 id="3-小屏时设计选项卡ul宽度"><a href="#3-小屏时设计选项卡ul宽度" class="headerlink" title="3.小屏时设计选项卡ul宽度"></a>3.小屏时设计选项卡ul宽度</h5><p><img src="/2017/10/07/md3/03-微金所项目（二）/63.png" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">/**2.目的：根据屏幕的尺寸，更改选项卡ul的宽度**/</div><div class="line">  $(window).on(&apos;resize&apos;,changeUlWidth)</div><div class="line">  function changeUlWidth() &#123;</div><div class="line">      //1.获取ul对象</div><div class="line">      var $ul=$(&apos;#wjs_product .nav&apos;);</div><div class="line"></div><div class="line">      //2.获取所有li的标签( 使用了属性选择器 )</div><div class="line">      //var $lis=$(&apos;#wjs_product .nav li[role=&quot;presentation&quot;]&apos;);//从window去查找lis标签</div><div class="line">      var $lis=$(&apos;li[role=&quot;presentation&quot;]&apos;,$ul);//从$ul范围去查找lis标签</div><div class="line"></div><div class="line">      //3.计算选项卡的宽</div><div class="line">      var tabWidth=0;</div><div class="line">      $lis.each(function (index, value) &#123;</div><div class="line">          var $li=$(value);</div><div class="line">          tabWidth+=$li.width();</div><div class="line">      &#125;)</div><div class="line"></div><div class="line">      //4.求出父标签的宽度</div><div class="line">      var parentWidth=$ul.parent().width();</div><div class="line">      //5.判断</div><div class="line">      if(tabWidth&gt;parentWidth)&#123;</div><div class="line">          //小屏，给ul设计宽度</div><div class="line">          $ul.css(&#123;</div><div class="line">              //添加样式</div><div class="line">              width:tabWidth,</div><div class="line">          &#125;)</div><div class="line">      &#125;else&#123;</div><div class="line">          //清楚-样式</div><div class="line">          $ul.removeAttr(&apos;style&apos;);</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">  //手动触发一个事件</div><div class="line">  $(window).trigger(&apos;resize&apos;);</div></pre></td></tr></table></figure>
-<h3 id="2-选项卡内容的实现am"><a href="#2-选项卡内容的实现am" class="headerlink" title="2.选项卡内容的实现am"></a>2.选项卡内容的实现am</h3><h4 id="1-栅格布局-1"><a href="#1-栅格布局-1" class="headerlink" title="1.栅格布局"></a>1.栅格布局</h4><p><img src="64.png" alt=""></p>
+<h3 id="2-选项卡内容的实现am"><a href="#2-选项卡内容的实现am" class="headerlink" title="2.选项卡内容的实现am"></a>2.选项卡内容的实现am</h3><h4 id="1-栅格布局-1"><a href="#1-栅格布局-1" class="headerlink" title="1.栅格布局"></a>1.栅格布局</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/64.png" alt=""></p>
 <h4 id="2-添加面板"><a href="#2-添加面板" class="headerlink" title="2.添加面板"></a>2.添加面板</h4><p>面板组件 ： <a href="http://v3.bootcss.com/components/#panels" target="_blank" rel="external">http://v3.bootcss.com/components/#panels</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;panel panel-default&quot;&gt;</div><div class="line">   &lt;!--面板的头部--&gt;</div><div class="line">  &lt;div class=&quot;panel-heading&quot;&gt;Panel heading without title&lt;/div&gt;</div><div class="line">  &lt;!--面板的内容--&gt;</div><div class="line">  &lt;div class=&quot;panel-body&quot;&gt;</div><div class="line">    Panel content</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <h5 id="1-添加一个面板"><a href="#1-添加一个面板" class="headerlink" title="1.添加一个面板"></a>1.添加一个面板</h5><p>最好面板用一个div包裹着</p>
-<p><img src="65.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/65.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="66.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/66.png" alt=""></p>
 <h5 id="2-添加多个面板"><a href="#2-添加多个面板" class="headerlink" title="2.添加多个面板"></a>2.添加多个面板</h5><p>1.用一个div包裹一个面板，共六个面板</p>
 <p>2.大屏显示3列，中屏显示2列，小屏显示1例</p>
-<p><img src="67.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/67.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="68.png" alt=""></p>
-<h4 id="3选项卡距离间距"><a href="#3选项卡距离间距" class="headerlink" title="3选项卡距离间距"></a>3选项卡距离间距</h4><p><img src="69.png" alt=""></p>
-<h4 id="4-面板的浮动"><a href="#4-面板的浮动" class="headerlink" title="4.面板的浮动"></a>4.面板的浮动</h4><p><img src="70.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/68.png" alt=""></p>
+<h4 id="3选项卡距离间距"><a href="#3选项卡距离间距" class="headerlink" title="3选项卡距离间距"></a>3选项卡距离间距</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/69.png" alt=""></p>
+<h4 id="4-面板的浮动"><a href="#4-面板的浮动" class="headerlink" title="4.面板的浮动"></a>4.面板的浮动</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/70.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="71.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/71.png" alt=""></p>
 <p>设计头部面板的高与内容面板的高一样</p>
-<p><img src="73.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/73.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="72.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/72.png" alt=""></p>
 <h4 id="5-面板头部布局"><a href="#5-面板头部布局" class="headerlink" title="5.面板头部布局"></a>5.面板头部布局</h4><p>1.面板头部的布局和选项卡body的高度</p>
-<p><img src="74.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/74.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="75.png" alt="">    </p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/75.png" alt="">    </p>
 <p>2.面板<strong>头部</strong>的左边的分界线</p>
 <p>同时去掉面板默认的背景</p>
-<p><img src="76.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/76.png" alt=""></p>
 <p>执行的效果：</p>
-<p><img src="77.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/77.png" alt=""></p>
 <p>3.面板头部布局添加字体图标</p>
-<p><img src="78.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/78.png" alt=""></p>
 <p>4.头部布局添加字体图标  <strong>定位</strong></p>
-<p><img src="79.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/79.png" alt=""></p>
 <p>执行的效果：</p>
-<p><img src="80.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/80.png" alt=""></p>
 <p>5.设计面板头部字体的样式</p>
-<p><img src="81.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/81.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="82.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/82.png" alt=""></p>
 <h4 id="6-面板body的布局"><a href="#6-面板body的布局" class="headerlink" title="6.面板body的布局"></a>6.面板body的布局</h4><p>1.栅格布局</p>
-<p><img src="83.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/83.png" alt=""></p>
 <p>2.调整panel-body的宽和container的宽</p>
 <p>或者使用container-fiuld容器</p>
-<p><img src="84.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/84.png" alt=""></p>
 <p>效果：</p>
-<p><img src="85.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/85.png" alt=""></p>
 <p>3.实现body中的布局</p>
 <p>固定分两屏：col-xs-6  col-sm-6  col-md-6  col-lg-6</p>
-<p><img src="86.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/86.png" alt=""></p>
 <p>执行的效果：</p>
-<p><img src="87.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/87.png" alt=""></p>
 <p>4.body中的样式</p>
 <p>设计title字体的大小和面板的内边距</p>
 <p>dl  dt dd  标签的用法： <a href="http://www.divcss5.com/html/h88.shtml" target="_blank" rel="external">http://www.divcss5.com/html/h88.shtml</a></p>
-<p><img src="89.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/89.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="88.png" alt=""></p>
-<h4 id="7-默认选中第一个面板"><a href="#7-默认选中第一个面板" class="headerlink" title="7.默认选中第一个面板"></a>7.默认选中第一个面板</h4><p><img src="90.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/88.png" alt=""></p>
+<h4 id="7-默认选中第一个面板"><a href="#7-默认选中第一个面板" class="headerlink" title="7.默认选中第一个面板"></a>7.默认选中第一个面板</h4><p><img src="/2017/10/07/md3/03-微金所项目（二）/90.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="91.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/91.png" alt=""></p>
 <h4 id="8-体验字体图标"><a href="#8-体验字体图标" class="headerlink" title="8.体验字体图标"></a>8.体验字体图标</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/*字体图标*/</div><div class="line">font-family: xmg;</div><div class="line">content: &apos;\e915&apos;;</div><div class="line">font-size: 45px;</div></pre></td></tr></table></figure>
-<p><img src="92.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/92.png" alt=""></p>
 <p>执行的效果：</p>
-<p><img src="93.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/93.png" alt=""></p>
 <h4 id="9-还款中-字体图标"><a href="#9-还款中-字体图标" class="headerlink" title="9.还款中 字体图标"></a>9.还款中 字体图标</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/*字体图标*/</div><div class="line">font-family: xmg;</div><div class="line">content: &apos;\e926&apos;;   //926 927 928</div><div class="line">font-size: 100px;</div><div class="line">color: #E9232C;</div></pre></td></tr></table></figure>
-<p><img src="94.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/94.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="95.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/95.png" alt=""></p>
 <h4 id="10-tip-提示"><a href="#10-tip-提示" class="headerlink" title="10 tip 提示"></a>10 tip 提示</h4><p>工具提示：<a href="http://v3.bootcss.com/javascript/#tooltips" target="_blank" rel="external">http://v3.bootcss.com/javascript/#tooltips</a></p>
 <p>1.添加tip布局</p>
-<p><img src="120.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/120.png" alt=""></p>
 <p>2.初始化tip</p>
-<p><img src="121.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/121.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="122.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/122.png" alt=""></p>
 <h2 id="5-新闻中心"><a href="#5-新闻中心" class="headerlink" title="5.新闻中心"></a>5.新闻中心</h2><h3 id="1-栅格系统"><a href="#1-栅格系统" class="headerlink" title="1.栅格系统"></a>1.栅格系统</h3><h4 id="1-栅格系统偏移介绍"><a href="#1-栅格系统偏移介绍" class="headerlink" title="1.栅格系统偏移介绍"></a>1.栅格系统偏移介绍</h4><p>使用col-xx-offset-xx</p>
-<p><img src="96.png" alt=""></p>
-<h3 id="2-栅格布局"><a href="#2-栅格布局" class="headerlink" title="2.栅格布局"></a>2.栅格布局</h3><p>列的权重分别是：  2,    2 ,   1 ,   5  ,  2 <img src="97.png" alt=""></p>
-<h3 id="3-全部新闻"><a href="#3-全部新闻" class="headerlink" title="3.全部新闻"></a>3.全部新闻</h3><p><img src="98.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/96.png" alt=""></p>
+<h3 id="2-栅格布局"><a href="#2-栅格布局" class="headerlink" title="2.栅格布局"></a>2.栅格布局</h3><p>列的权重分别是：  2,    2 ,   1 ,   5  ,  2 <img src="/2017/10/07/md3/03-微金所项目（二）/97.png" alt=""></p>
+<h3 id="3-全部新闻"><a href="#3-全部新闻" class="headerlink" title="3.全部新闻"></a>3.全部新闻</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/98.png" alt=""></p>
 <h3 id="4-导航-胶囊标签页"><a href="#4-导航-胶囊标签页" class="headerlink" title="4.导航-胶囊标签页"></a>4.导航-胶囊标签页</h3><p>导航组件（胶囊式<strong>标签页</strong>）：<a href="http://v3.bootcss.com/components/#nav" target="_blank" rel="external">http://v3.bootcss.com/components/#nav</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;ul class=&quot;nav nav-pills nav-stacked&quot;&gt;</div><div class="line">  ...</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure>
 <p>1.引入垂直标签页</p>
-<p><img src="99.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/99.png" alt=""></p>
 <p>  执行效果：</p>
-<p><img src="100.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/100.png" alt=""></p>
 <h3 id="5-添加字体图标"><a href="#5-添加字体图标" class="headerlink" title="5.添加字体图标"></a>5.添加字体图标</h3><p>1.添加字体图标</p>
-<p><img src="101.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/101.png" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#wjs_news .icon-news01::before&#123;</div><div class="line">    content: &quot;\e90e&quot;;</div><div class="line">&#125;</div><div class="line">#wjs_news .icon-news02::before&#123;</div><div class="line">    content: &quot;\e910&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#wjs_news .icon-news03::before&#123;</div><div class="line">    content: &quot;\e911&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#wjs_news .icon-news04::before&#123;</div><div class="line">    content: &quot;\e912&quot;;</div><div class="line">&#125;</div><div class="line">#wjs_news .icon-news01::before,</div><div class="line">#wjs_news .icon-news02::before,</div><div class="line">#wjs_news .icon-news03::before,</div><div class="line">#wjs_news .icon-news04::before&#123;</div><div class="line">    font-size: 28px;</div><div class="line">    color: #EAEAEA;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>执行效果：</p>
-<p><img src="102.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/102.png" alt=""></p>
 <p>2.修改a标签背景</p>
 <p>给 a 标签添加了 width  和  heigth  需要改变标签的类型</p>
-<p><img src="103.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/103.png" alt=""></p>
 <p>效果：</p>
-<p><img src="104.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/104.png" alt=""></p>
 <p>3.默认第一个选中</p>
-<p><img src="105.png" alt=""></p>
-<h3 id="6-处理小屏图标显示"><a href="#6-处理小屏图标显示" class="headerlink" title="6.处理小屏图标显示"></a>6.处理小屏图标显示</h3><p><img src="106.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/105.png" alt=""></p>
+<h3 id="6-处理小屏图标显示"><a href="#6-处理小屏图标显示" class="headerlink" title="6.处理小屏图标显示"></a>6.处理小屏图标显示</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/106.png" alt=""></p>
 <p>1.图标中的a标签左浮动</p>
-<p><img src="107.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/107.png" alt=""></p>
 <h3 id="7-内容面板"><a href="#7-内容面板" class="headerlink" title="7.内容面板"></a>7.内容面板</h3><p>1.面板布局</p>
-<p><img src="108.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/108.png" alt=""></p>
 <p>2.内容面板样式</p>
-<p><img src="109.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/109.png" alt=""></p>
 <p>执行效果：</p>
-<p><img src="110.png" alt=""></p>
-<h2 id="6-合作伙伴"><a href="#6-合作伙伴" class="headerlink" title="6.合作伙伴"></a>6.合作伙伴</h2><h3 id="1-合作伙伴"><a href="#1-合作伙伴" class="headerlink" title="1.合作伙伴"></a>1.合作伙伴</h3><p><img src="111.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/110.png" alt=""></p>
+<h2 id="6-合作伙伴"><a href="#6-合作伙伴" class="headerlink" title="6.合作伙伴"></a>6.合作伙伴</h2><h3 id="1-合作伙伴"><a href="#1-合作伙伴" class="headerlink" title="1.合作伙伴"></a>1.合作伙伴</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/111.png" alt=""></p>
 <h3 id="2-合作伙伴列表9"><a href="#2-合作伙伴列表9" class="headerlink" title="2.合作伙伴列表9"></a>2.合作伙伴列表9</h3><p>1.栅格布局</p>
-<p><img src="112.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/112.png" alt=""></p>
 <p>2.列表布局</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&lt;ul class=&quot;footer-icon&quot;&gt;</div><div class="line">                   &lt;li&gt;</div><div class="line">                       &lt;a class=&quot;icon-uniE930&quot; href=&quot;http://www.chinapay.com/&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</div><div class="line">                   &lt;/li&gt;</div><div class="line">                   &lt;li&gt;</div><div class="line">                       &lt;a class=&quot;icon-uniE92F&quot; href=&quot;http://www.chinapay.com/&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</div><div class="line">                   &lt;/li&gt;</div><div class="line">                   &lt;li&gt;</div><div class="line">                       &lt;a class=&quot;icon-uniE92E&quot; href=&quot;http://www.chinapay.com/&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</div><div class="line">                   &lt;/li&gt;</div><div class="line">                   &lt;li&gt;</div><div class="line">                       &lt;a class=&quot;icon-uniE92A&quot; href=&quot;http://www.chinapay.com/&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</div><div class="line">                   &lt;/li&gt;</div><div class="line">                   &lt;li&gt;</div><div class="line">                       &lt;a class=&quot;icon-uniE929&quot; href=&quot;http://www.chinapay.com/&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</div><div class="line">                   &lt;/li&gt;</div><div class="line">                   &lt;li&gt;</div><div class="line">                       &lt;a class=&quot;icon-uniE931&quot; href=&quot;http://www.chinapay.com/&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</div><div class="line">                   &lt;/li&gt;</div><div class="line">                   &lt;li&gt;</div><div class="line">                       &lt;a class=&quot;icon-uniE92C&quot; href=&quot;http://www.chinapay.com/&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</div><div class="line">                   &lt;/li&gt;</div><div class="line">                   &lt;li&gt;</div><div class="line">                       &lt;a class=&quot;icon-uniE92B&quot; href=&quot;http://www.chinapay.com/&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</div><div class="line">                   &lt;/li&gt;</div><div class="line">                   &lt;li&gt;</div><div class="line">                       &lt;a class=&quot;icon-uniE92D&quot; href=&quot;http://www.chinapay.com/&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</div><div class="line">                   &lt;/li&gt;</div><div class="line">               &lt;/ul&gt;</div></pre></td></tr></table></figure>
 <p>3，列表字体样式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line">.icon-uniE930:hover &#123;</div><div class="line">    color: #df3232;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE930:before &#123;</div><div class="line">    content: &quot;\e946&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92F:hover &#123;</div><div class="line">    color: #e8380d;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92F:before &#123;</div><div class="line">    content: &quot;\e92f&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92E:hover &#123;</div><div class="line">    color: #ed6f00;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92E:before &#123;</div><div class="line">    content: &quot;\e92e&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92A:hover &#123;</div><div class="line">    color: #159f69;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92A:before &#123;</div><div class="line">    content: &quot;\e92a&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE929:hover &#123;</div><div class="line">    color: #07569e;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE929:before &#123;</div><div class="line">    content: &quot;\e929&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE931:hover &#123;</div><div class="line">    color: #004098;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE931:before &#123;</div><div class="line">    content: &quot;\e931&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92C:hover &#123;</div><div class="line">    color: #d32019;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92C:before &#123;</div><div class="line">    content: &quot;\e92c&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92B:hover &#123;</div><div class="line">    color: #3eac4a;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92B:before &#123;</div><div class="line">    content: &quot;\e92b&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92D:hover &#123;</div><div class="line">    color: #2bb289;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.icon-uniE92D:before &#123;</div><div class="line">    content: &quot;\e92d&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="3-合作伙伴列表样式"><a href="#3-合作伙伴列表样式" class="headerlink" title="3.合作伙伴列表样式"></a>3.合作伙伴列表样式</h3><p><img src="113.png" alt=""></p>
+<h3 id="3-合作伙伴列表样式"><a href="#3-合作伙伴列表样式" class="headerlink" title="3.合作伙伴列表样式"></a>3.合作伙伴列表样式</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/113.png" alt=""></p>
 <h3 id="4-平分布局"><a href="#4-平分布局" class="headerlink" title="4.平分布局"></a>4.平分布局</h3><p>1.可以通过<strong>弹性布局flex</strong>，设计主轴的对齐方式</p>
 <p>2.可以通过<strong>ccs3</strong>的 <strong>calc</strong> 这个属性</p>
-<p><img src="114.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/114.png" alt=""></p>
 <p>效果：</p>
-<p><img src="115.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/115.png" alt=""></p>
 <h3 id="5-清楚文字的间隙"><a href="#5-清楚文字的间隙" class="headerlink" title="5.清楚文字的间隙"></a>5.清楚文字的间隙</h3><p>清楚文字的间隙</p>
-<p><img src="116.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/116.png" alt=""></p>
 <h3 id="6-探究calc属性"><a href="#6-探究calc属性" class="headerlink" title="6.探究calc属性"></a>6.探究calc属性</h3><p><strong>calc</strong> :  让css的属性具备简单的运算功能 + - * /</p>
-<p><img src="117.png" alt=""></p>
-<h3 id="7-添加分界线"><a href="#7-添加分界线" class="headerlink" title="7.添加分界线"></a>7.添加分界线</h3><p><img src="118.png" alt=""></p>
-<h3 id="8-样式的优先级"><a href="#8-样式的优先级" class="headerlink" title="8.样式的优先级"></a>8.样式的优先级</h3><p><img src="119.png" alt=""></p>
-<h3 id="9-小屏隐藏合作伙伴"><a href="#9-小屏隐藏合作伙伴" class="headerlink" title="9.小屏隐藏合作伙伴"></a>9.小屏隐藏合作伙伴</h3><p><img src="128.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/117.png" alt=""></p>
+<h3 id="7-添加分界线"><a href="#7-添加分界线" class="headerlink" title="7.添加分界线"></a>7.添加分界线</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/118.png" alt=""></p>
+<h3 id="8-样式的优先级"><a href="#8-样式的优先级" class="headerlink" title="8.样式的优先级"></a>8.样式的优先级</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/119.png" alt=""></p>
+<h3 id="9-小屏隐藏合作伙伴"><a href="#9-小屏隐藏合作伙伴" class="headerlink" title="9.小屏隐藏合作伙伴"></a>9.小屏隐藏合作伙伴</h3><p><img src="/2017/10/07/md3/03-微金所项目（二）/128.png" alt=""></p>
 <h2 id="7-导航条吸顶效果"><a href="#7-导航条吸顶效果" class="headerlink" title="7.导航条吸顶效果"></a>7.导航条吸顶效果</h2><p>附加导航Affix ： <a href="http://v3.bootcss.com/javascript/#affix" target="_blank" rel="external">http://v3.bootcss.com/javascript/#affix</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">navbar-static-top   // 在最顶层</div><div class="line"></div><div class="line">data-spy=&quot;affix&quot; // 给导航条添加了一个affix的class</div><div class="line">data-offset-top=&quot;60&quot;  //在距离顶部什么位置出现</div><div class="line">data-offset-bottom=&quot;60&quot;  //在距离底部什么位置消失</div><div class="line"></div><div class="line">width:100%</div><div class="line">left:0    //相对于浏览器来定位</div><div class="line">top:0     //相对于浏览器来定位</div></pre></td></tr></table></figure>
-<p><img src="123.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/123.png" alt=""></p>
 <h2 id="8-定制Bootstrap"><a href="#8-定制Bootstrap" class="headerlink" title="8.定制Bootstrap"></a>8.定制Bootstrap</h2><p><a href="http://v3.bootcss.com/customize/" target="_blank" rel="external">http://v3.bootcss.com/customize/</a></p>
 <h2 id="9-swiper"><a href="#9-swiper" class="headerlink" title="9.swiper"></a>9.swiper</h2><h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h3><p>swiper是一款<strong>免费</strong>以及<strong>轻量</strong>级的<strong>移动设备触控滑块</strong>的js框架，主要是为<strong>iOS</strong>设计，同时，在Android、WP系统和其他PC浏览器上也有着良好的体验。</p>
 <p><strong>特点</strong></p>
 <p>轻量级，简洁高效，可定制性非常高；</p>
 <p>横跨各种设备，兼容IOS、Android、WP、PC端设备；</p>
 <p>提供多种版本支持（可自由选择jQuery   \/  zepto版或原生js）。</p>
-<p><img src="124.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/124.png" alt=""></p>
 <p>github : <a href="https://github.com/nolimits4web/Swiper" target="_blank" rel="external">https://github.com/nolimits4web/Swiper</a></p>
 <p>官方文档：<a href="http://www.swiper.com.cn/" target="_blank" rel="external">http://www.swiper.com.cn/</a></p>
 <h3 id="2-简单使用"><a href="#2-简单使用" class="headerlink" title="2.简单使用"></a>2.简单使用</h3><h4 id="1-引入框架"><a href="#1-引入框架" class="headerlink" title="1.引入框架"></a>1.引入框架</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/swiper.css&quot;&gt;</div><div class="line"> </div><div class="line">&lt;script src=&quot;js/swiper.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p><img src="125.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/125.png" alt=""></p>
 <h4 id="2-布局使用swiper"><a href="#2-布局使用swiper" class="headerlink" title="2.布局使用swiper"></a>2.布局使用swiper</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;swiper-container&quot;&gt;</div><div class="line">    &lt;div class=&quot;swiper-wrapper&quot;&gt;</div><div class="line">        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 1&lt;/div&gt;</div><div class="line">        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 2&lt;/div&gt;</div><div class="line">        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 3&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<p><img src="126.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/126.png" alt=""></p>
 <h4 id="3-初始化swiper"><a href="#3-初始化swiper" class="headerlink" title="3.初始化swiper"></a>3.初始化swiper</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    //Js文件调用</div><div class="line">    var swiper = new Swiper(&apos;.swiper-container&apos;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p><img src="127.png" alt=""></p>
+<p><img src="/2017/10/07/md3/03-微金所项目（二）/127.png" alt=""></p>
 <h3 id="3-高级效果和参数"><a href="#3-高级效果和参数" class="headerlink" title="3.高级效果和参数"></a>3.高级效果和参数</h3><p>html部分:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"> &lt;div class=&quot;swiper-container&quot;&gt;</div><div class="line">      &lt;div class=&quot;swiper-wrapper&quot;&gt;</div><div class="line">           &lt;div class=&quot;swiper-slide&quot;&gt;Slide 1&lt;/div&gt;</div><div class="line">           &lt;div class=&quot;swiper-slide&quot;&gt;Slide 2&lt;/div&gt;</div><div class="line">           &lt;div class=&quot;swiper-slide&quot;&gt;Slide 3&lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line"></div><div class="line">      &lt;!-- 如果需要分页器 --&gt;</div><div class="line">      &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">      &lt;!-- 如果需要导航按钮 --&gt;</div><div class="line">      &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;</div><div class="line">      &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">      &lt;!-- 如果需要滚动条 --&gt;</div><div class="line">      &lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <p>JS部分:</p>
@@ -707,11 +707,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/10/07/md4/04-QQ官网项目（一）/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/10/07/框架实战1/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          框架实战1
         
       </div>
     </a>
